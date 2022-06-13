@@ -181,27 +181,31 @@ The keys of R based on F are (G,E) and (H,E).
 \begin_inset Newline newline
 \end_inset
 
-First of all, we can see the the attribute E is not apart of any 
+First of all, attribute E is not a part of any 
 \begin_inset Formula $f\in F$
 \end_inset
 
- rhs - and therefor must be apart of any super-key.
+ right hand side - and therefor must be a part of any super-key.
 \begin_inset Newline newline
 \end_inset
 
-Secondly, we can see that the attribute G is located only once in the rhs
- of a rule in F: 
+Secondly, attribute G is located only once in the right hand side of a rule
+ in F (
 \begin_inset Formula $H\rightarrow G$
 \end_inset
 
-.
- The same goes to attribute H with the rule 
+).
+ The same goes to attribute H (
 \begin_inset Formula $G\rightarrow H$
 \end_inset
 
-.
- This entails that for every super-key of F G or H must be included.
- If could prove that 
+).
+ This entails that for every super-key of F, G or H must be included.
+ 
+\begin_inset Newline newline
+\end_inset
+
+If we could prove that 
 \begin_inset Formula $(\{E,H\})_{F}^{+}=R$
 \end_inset
 
@@ -975,7 +979,35 @@ The above tow tuples are identical on all columns except G, H and A.
 
 \end_deeper
 \begin_layout Section
-Decompostion
+temp
+\end_layout
+
+\begin_layout Section
+temp
+\end_layout
+
+\begin_layout Section
+Locks
+\end_layout
+
+\begin_layout Enumerate
+True, the resulting schedule is conflict serializable.
+ The Conservative protocol uses a two phase locking mechanism - at first
+ it locks 
+\series bold
+all
+\series default
+ the resources the transaction needs at once, and then unlocks the resources
+ in some matter.
+ By using theorem from the lecture: 
+\begin_inset Quotes eld
+\end_inset
+
+Every 2PL scheduling is conflict serializable
+\begin_inset Quotes erd
+\end_inset
+
+.
 \end_layout
 
 \end_body
