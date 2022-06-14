@@ -3417,7 +3417,224 @@ NF let alone BCNF.
 \end_layout
 
 \begin_layout Section
-temp
+Armstrong's Axioms
+\end_layout
+
+\begin_layout Standard
+We saw in the lecture Armstrong's axioms and we proved that it's sound and
+ complete.
+\end_layout
+
+\begin_layout Standard
+Given the axioms system
+\end_layout
+
+\begin_layout Enumerate
+Reflexivity - 
+\begin_inset Formula $Y\sseq X\Ra X\ra Y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Transitivity - 
+\begin_inset Formula $X\ra Y\wedge Y\ra Z\Ra X\ra Z$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Is the system sound? Explain in short
+\end_layout
+
+\begin_layout Standard
+Yes, the system is sound.
+\end_layout
+
+\begin_layout Standard
+This is because the axioms are a subset of axioms in a sound system.
+ Meaning that each proof that relies on those axioms will also be a proof
+ in the system that we know is sound.
+ Meaning that the proof will prove something that is correct, i.e.
+ the system is sound.
+\end_layout
+
+\begin_layout Subsection
+Is the system complete?
+\end_layout
+
+\begin_layout Standard
+No.
+\end_layout
+
+\begin_layout Standard
+The short reason is that if it were, then Armstrong wouldn't have bothered
+ with the third axiom.
+\end_layout
+
+\begin_layout Standard
+The non-smartass answer is that we know that for 
+\begin_inset Formula $R\left(A,B,C\right)$
+\end_inset
+
+ scheme and 
+\begin_inset Formula $F=\left\{ A\ra B,A\ra C\right\} $
+\end_inset
+
+ the FD 
+\begin_inset Formula $A\ra BC$
+\end_inset
+
+ is correct (union).
+\end_layout
+
+\begin_layout Standard
+Let's prove that no FD with one attribute on the left side and more than
+ one on the right can be proven.
+\end_layout
+
+\begin_layout Proof
+We'll prove by way of induction on the structure of proofs:
+\end_layout
+
+\begin_layout Proof
+Base: Immediate on all of the FDs in 
+\begin_inset Formula $F$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Step: Assume until now, there's no such FD.
+\end_layout
+
+\begin_layout Proof
+Note that an FD is proven if it appears in a node of a valid proof tree
+ (as shown in the lecture).
+\end_layout
+
+\begin_deeper
+\begin_layout Case
+Reflexivity step
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+A node of inference using the reflexivity axiom of the form 
+\begin_inset Formula $X\ra Y$
+\end_inset
+
+ can only be when 
+\begin_inset Formula $Y\sseq X$
+\end_inset
+
+.
+ Meaning that there can't be only one attribute in 
+\begin_inset Formula $X$
+\end_inset
+
+ is there are more than one in 
+\begin_inset Formula $Y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Thus in this case we didn't get a rule with one attribute on the left and
+ two on the right.
+\end_layout
+
+\end_deeper
+\begin_layout Case
+Transitivity step
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+A node (FD) of inference using the transitivity axiom can't have more than
+ the max attributes on the first and second right sides of the parent nodes.
+\end_layout
+
+\begin_layout Standard
+In other words, assume the inference used the two FDs 
+\begin_inset Formula $X\ra Y,Y\ra Z$
+\end_inset
+
+ then the current FD is 
+\begin_inset Formula $X\ra Z$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+BWoC (by a way of contradiction): there's one attribute in 
+\begin_inset Formula $X$
+\end_inset
+
+ and more than one in 
+\begin_inset Formula $Z$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Thus in 
+\begin_inset Formula $Y$
+\end_inset
+
+ there are more than one attributes (the induction's assumption).
+ But now the FD 
+\begin_inset Formula $X\ra Y$
+\end_inset
+
+ contradicts the assumption.
+\end_layout
+
+\begin_layout Standard
+Meaning that 
+\begin_inset Formula $X\ra Z$
+\end_inset
+
+ isn't an FD with one attribute on the right and more than one on the left.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Thus we concluded to prove both possible cases which proved the induction
+ step.
+\end_layout
+
+\begin_layout Standard
+Meaning that from the given relation 
+\begin_inset Formula $R$
+\end_inset
+
+ and 
+\begin_inset Formula $F$
+\end_inset
+
+ FDs, no FD with one attribute on the left side and more than one on the
+ right can be proven.
+\end_layout
+
+\begin_layout Standard
+Thus 
+\begin_inset Formula $A\ra BC$
+\end_inset
+
+ cannot be proved.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Q.E.D
 \end_layout
 
 \begin_layout Section
