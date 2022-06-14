@@ -107,11 +107,400 @@ theorems-std
 \begin_body
 
 \begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand input
-preview true
-filename "/Users/gtelem/Library/Application Support/LyX-2.3/templates/macros.lyx"
+\begin_inset FormulaMacro
+\newcommand{\undeq}[1]{\underset{\text{#1}}{\underbrace{=}}}
+\end_inset
 
+
+\begin_inset FormulaMacro
+\newcommand{\und}[2]{\underset{\text{#2}}{\underbrace{#1}}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\upreq}[1]{\overset{#1}{\overbrace{=}}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\upr}[2]{\overset{#2}{\overbrace{#1}}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\Z}{\mathbb{Z}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\N}{\mathbb{N}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\C}{\mathbb{C}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\P}{\mathbb{P}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\Q}{\mathbb{Q}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\R}{\mathbb{R}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\Ra}{\Longrightarrow}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\Lra}{\Longleftrightarrow}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\La}{\Longleftarrow}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\ra}{\rightarrow}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\la}{\leftarrow}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\lra}{\longleftrightarrow}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\set}[2]{\left\{  #1\mid#2\right\}  }
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\e}[2]{\left(#1,#2\right)}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\abs}[1]{\left|#1\right|}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\seg}[2]{\left[#1,#2\right]}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\absv}{\left|V\right|}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\renewcommand{\absv}{\left|E\right|}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\sseq}{\subseteq}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\nsseq}{\nsubseteq}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\ewfunc}[1]{#1:E\ra\R}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\ewfuncp}[1]{#1:E\ra\R^{+}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\ewfuncnn}[1]{#1:E\ra\R_{\geq0}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\vwfunc}[1]{#1:V\ra\R}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\d}{\partial}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\h}[1]{\hat{#1}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\hi}{\hat{i}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\hj}{\hat{j}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\hk}{\hat{k}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\hx}{\hat{x}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\hy}{\hat{y}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\hz}{\hat{z}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\grad}{\vec{\nabla}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\lam}{\lambda}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\g}{\gamma}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\gam}{\gamma}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\Gam}{\Gamma}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\oiint}{\varoiint}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\eps}{\varepsilon}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\ez}{\varepsilon_{0}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\vF}{\vec{F}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\vN}{\vec{N}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\renewcommand{\eps}{\varepsilon}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\t}{\theta}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\p}{\phi}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\vp}{\varphi}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\half}{\frac{1}{2}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\tp}{2\pi}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\c}[1]{\dot{#1}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\exp}[1]{\cdot10^{#1}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\hc}{\c h\c c}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\hb}{\c{\hslash}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\varF}{\mathcal{F}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\es}{\emptyset}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\nin}{\notin}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\Mx}{\left(\left\langle M\right\rangle ,x\right)}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\oHP}{\overline{HP}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\fa}{\forall}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\ex}{\exists}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\Ss}{\Sigma^{*}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\ls}{L_{S_{1},S_{2}}}
 \end_inset
 
 
