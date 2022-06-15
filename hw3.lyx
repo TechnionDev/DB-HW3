@@ -4039,7 +4039,7 @@ all
 \series default
  the resources the transaction needs at once, and then unlocks the resources
  in some matter.
- By using theorem from the lecture: 
+ By using the theorem from the lecture: 
 \begin_inset Quotes eld
 \end_inset
 
@@ -4047,7 +4047,95 @@ Every 2PL scheduling is conflict serializable
 \begin_inset Quotes erd
 \end_inset
 
+ - thus we can state that the Conservative protocol is conflict serializable.
+\end_layout
+
+\begin_layout Enumerate
+False, lest show an example of a 2PL schedule and then convert it to use
+ only Glock as part of a Conservative protocol and we will see that the
+ order of the read/write action has changed.
+ 
+\begin_inset Newline newline
+\end_inset
+
+Original schedule would be: 
+\begin_inset Formula 
+\begin{align*}
+RL_{1}(x),R_{1}(x),WL_{2}(y),W_{2}(y),WU_{2}(y),WL_{1}(y),W_{1}(y),WU_{1}(x),WU_{1}(y)\\
+\end{align*}
+
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+Notice that this schedule is indeed a 2PL schedule - transition no.1 locks
+ resource x and resource y (growing phase), and only at the end releases
+ both of the locks (shrink phase).
+ The same goes to transition no.2 - it first locks resource y and then unlocks
+ it (quite trivial when it's only using one resource).
+ 
+\begin_inset Newline newline
+\end_inset
+
+We can also notice that the intended order of writing to resource y is transitio
+n no.2 and then transition no.1.
+\begin_inset Newline newline
+\end_inset
+
+Lets now convert the schedule to a Conservative one: 
+\begin_inset Formula 
+\begin{align*}
+GLOCK_{1}(x,y),R_{1}(x),W_{1}(y),UNLOCK_{1}(x,y),GLOCK_{2}(y),W_{2}(y),UNLOCK_{2}(y)\\
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+We can see that this is in-according to the Conservative protocol - transaction
+ no.1 first locks 
+\series bold
+all
+\series default
+ of its needed resources (x and y) and then reads/writes and unlocks the
+ resources.
+ meanwhile transaction no.2 is blocked from using resource y.
+ This results in a flip order of writing to resource y (
+\begin_inset Formula $1\rightarrow2$
+\end_inset
+
+ instead of 
+\begin_inset Formula $2\rightarrow1$
+\end_inset
+
+), so the statement is false.
+\end_layout
+
+\begin_layout Enumerate
+True, a deadlock happens when all of the following conditions are met: Mutual
+ Exclusion, Hold and Wait, No Preemption and Circular Wait.
+ It is clear that the Conservative protocol is set to deal with the case
+ of 
+\begin_inset Quotes eld
+\end_inset
+
+Hold and Wait
+\begin_inset Quotes erd
+\end_inset
+
 .
+ According to the rules of the the Conservative protocol, each transition
+ must lock all the necessary resources it needs in one single glock action.
+ Therefor it is not possible for a transaction to hold some locks and in
+ the meantime wait for some over lock to reales (in such case the glock
+ action will block the transaction in the first place before acquiring any
+ resources).
+ Thus the statement is True.
+ 
 \end_layout
 
 \end_body
